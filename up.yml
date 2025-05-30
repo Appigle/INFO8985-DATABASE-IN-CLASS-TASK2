@@ -8,6 +8,8 @@
         files:
         - docker-compose.yml
         state: present
+        docker_cli: /usr/bin/docker
+        docker_host: unix:///var/run/docker.sock
     - import_tasks: lcbo/up.yml
       vars:
         db_user: lcbo

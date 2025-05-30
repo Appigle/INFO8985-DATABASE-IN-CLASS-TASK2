@@ -233,7 +233,7 @@ service:
       processors: [signozspanmetrics/cumulative, signozspanmetrics/delta, batch]
       exporters: [clickhousetraces]
     metrics:
-      receivers: [otlp]
+      receivers: [otlp, postgresql, sqlquery]
       processors: [batch]
       exporters: [clickhousemetricswrite]
     metrics/generic:

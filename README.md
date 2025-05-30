@@ -40,6 +40,16 @@ postgresql:
     max_lifetime: 0
     max_idle: 2
     max_open: 5
+
+    // .... ignore
+
+service:
+  pipeline:
+    // ...ignore
+    metrics:
+      receivers: [otlp, postgresql, sqlquery] // <-- add new receivers
+      processors: [batch]
+      exporters: [clickhousemetricswrite]
 ```
 
 # .Devcontainer for macos(arm)
