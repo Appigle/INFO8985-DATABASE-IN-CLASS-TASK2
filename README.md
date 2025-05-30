@@ -41,3 +41,15 @@ postgresql:
     max_idle: 2
     max_open: 5
 ```
+
+# .Devcontainer for macos(arm)
+
+```json
+  "name": "Default Linux Universal (Ubuntu 22.04)",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    }
+  },
+```
